@@ -35,6 +35,8 @@
 *.i*86
 *.x86_64
 *.hex
+early_tests/simple_print
+early_tests/header_to_file
 
 # Debug files
 *.dSYM/
