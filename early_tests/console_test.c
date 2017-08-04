@@ -1,3 +1,7 @@
+/* Program that takes in two integers from user
+   input on the console, and multiplies them
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
