@@ -1,0 +1,1 @@
+void funct_text();
