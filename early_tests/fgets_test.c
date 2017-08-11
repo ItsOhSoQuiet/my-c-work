@@ -10,8 +10,13 @@ long int num_entry(void){
     printf("Done!\n\n");
     return -1;
   } else {
-    i = strtol(buff, &endpoint, 10);
-    return i;
+    if (buff[0] == '\n'){
+      printf("Done!\n");
+      return -1;
+    } else {
+      i = strtol(buff, &endpoint, 10);
+      return i;
+    }
   }
 }
 
