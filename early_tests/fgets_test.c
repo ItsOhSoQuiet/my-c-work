@@ -7,11 +7,11 @@ long int num_entry(void){
   long int i;
   if (fgets(buff, 100, stdin) == NULL) {
     printf("Done!\n\n");
-    return -1;
+    return -4000000000;
   } else {
     if (buff[0] == '\n'){
       printf("Done!\n");
-      return -1;
+      return -4000000000;
     } else {
       i = strtol(buff, &endpoint, 10);
       return i;
@@ -26,25 +26,21 @@ int main(int argc, char *argv[]){
   fgets(buff, 10, stdin);
   arraySize = atoi(buff);
   if (arraySize < 1){
-    printf("Enter an actual integer for how many numbers you wish to enter.\n");
+    printf("Enter a positive integer for how many numbers you wish to enter.\n");
     return 0;
   } else {
     long int numArray[arraySize];
-    int i, j;
+    int i;
     long int k;
     i = 0;
-    j = 0;
-    while (j != -1){
+    while (i < arraySize){
       printf("Enter number %d, or enter blank line to exit: ", i+1);
       k = num_entry();
-      if (k == -1){
+      if (k == -4000000000){
         break;
       } else {
         numArray[i] = k;
         i++;
-        if (i == arraySize){
-          break;
-        }
       }
     }
     if (i == 0){
